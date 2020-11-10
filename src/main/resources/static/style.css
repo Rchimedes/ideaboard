@@ -1,0 +1,35 @@
+.title {
+    font-size: x-large;
+
+}
+.container {
+    display: inline-block;
+    width: 500px;
+    border: 5px solid black;
+    padding: 25px;
+    vertical-align: top;
+    border-radius: 4px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 1060px;
+    margin: 0 auto;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+a{
+    text-decoration: none;
+}
+.columnWide{
+    column-width: 300px;
+}
