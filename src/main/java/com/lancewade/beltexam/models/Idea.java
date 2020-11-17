@@ -13,11 +13,9 @@ public class Idea {
     private Long id;
     @NotBlank
     private String content;
-
     @Column(updatable=false)
     private Date createdAt;
     private Date updatedAt;
-
     @PrePersist
     protected void onCreate() {
         this.createdAt = new Date();
@@ -39,57 +37,45 @@ public class Idea {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User creator;
-
     public Idea(){}
-
     public Idea(String content){
         this.content = content;
     }
-
     public Long getId() {
         return id;
     }
 
+    //Getters and setters
     public void setId(Long id) {
         this.id = id;
     }
-
     public String getContent() {
         return content;
     }
-
     public void setContent(String content) {
         this.content = content;
     }
-
     public Date getCreatedAt() {
         return createdAt;
     }
-
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
-
     public Date getUpdatedAt() {
         return updatedAt;
     }
-
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-
     public List<User> getUserLikes() {
         return userLikes;
     }
-
     public void setUserLikes(List<User> userLikes) {
         this.userLikes = userLikes;
     }
-
     public User getCreator() {
         return creator;
     }
-
     public void setCreator(User creator) {
         this.creator = creator;
     }

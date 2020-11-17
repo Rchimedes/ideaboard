@@ -13,6 +13,7 @@ public class UserIdea {
     private Date createdAt;
     private Date updatedAt;
 
+    //Relationships
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
@@ -32,43 +33,22 @@ public class UserIdea {
 
     public UserIdea() {
     }
-
+    //Getters and setters
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
     public User getUser() {
         return user;
     }
-
     public void setUser(User user) {
         this.user = user;
     }
-
     public Idea getIdea() {
         return idea;
     }
-
     public void setIdea(Idea idea) {
         this.idea = idea;
     }
